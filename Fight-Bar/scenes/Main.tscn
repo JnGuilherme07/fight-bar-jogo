@@ -57,26 +57,78 @@ shape = SubResource("RectangleShape2D_enemy")
 script = ExtResource("3_9d12")
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD"]
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 0
 alignment = 1
 
-[node name="PlayerHealthBar" type="ProgressBar" parent="HUD/MarginContainer/HBoxContainer"]
+[node name="PlayerColumn" type="VBoxContainer" parent="HUD/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="HUD/MarginContainer/HBoxContainer/PlayerColumn"]
 custom_minimum_size = Vector2(300, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 100.0
 value = 100.0
 show_percentage = true
+
+[node name="PlayerWinsLabel" type="Label" parent="HUD/MarginContainer/HBoxContainer/PlayerColumn"]
+layout_mode = 2
+text = "Vitórias: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerContainer" type="ColorRect" parent="HUD/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(1, 0.59, 0.1, 1)
+
+[node name="TimerLabel" type="Label" parent="HUD/MarginContainer/HBoxContainer/TimerContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+label_settings = null
+
+[node name="EnemyColumn" type="VBoxContainer" parent="HUD/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="HUD/MarginContainer/HBoxContainer/EnemyColumn"]
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 100.0
+value = 100.0
+show_percentage = true
+
+[node name="EnemyWinsLabel" type="Label" parent="HUD/MarginContainer/HBoxContainer/EnemyColumn"]
+layout_mode = 2
+text = "Vitórias: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ComboLabel" type="Label" parent="HUD/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -84,10 +136,6 @@ text = "Combo: -"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnemyHealthBar" type="ProgressBar" parent="HUD/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(300, 24)
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 100.0
-value = 100.0
-show_percentage = true
+[node name="CountdownTimer" type="Timer" parent="HUD"]
+wait_time = 1.0
+autostart = true

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 signal health_changed(current_health, max_value)
 signal combo_status_changed(text)
+signal wins_changed(current_wins)
 
 @export var speed: float = 260.0
 @export var jump_velocity: float = -420.0
@@ -13,6 +14,7 @@ signal combo_status_changed(text)
 
 var facing: int = 1
 var health: int = max_health
+var wins: int = 0
 var attack_cooldown: float = 0.0
 var attack_timer: float = 0.0
 var current_attack: String = ""
@@ -125,6 +127,7 @@ func _ready() -> void:
 	position = spawn_position
 	emit_signal("health_changed", health, max_health)
 	emit_signal("combo_status_changed", "Combo: -")
+	emit_signal("wins_changed", wins)
 
 func _physics_process(delta: float) -> void:
 	if attack_cooldown > 0.0:
@@ -302,6 +305,8 @@ func apply_damage(amount: int) -> void:
 		var winner_name: String = "Player 2" if player_number == 1 else "Player 1"
 		emit_signal("combo_status_changed", "%s venceu!" % winner_name)
 		if enemy != null and is_instance_valid(enemy):
+			enemy.wins += 1
+			enemy.emit_signal("wins_changed", enemy.wins)
 			enemy.emit_signal("combo_status_changed", "%s venceu!" % winner_name)
 			enemy.position = enemy.spawn_position
 			enemy.health = enemy.max_health
@@ -314,6 +319,7 @@ func apply_damage(amount: int) -> void:
 		position = spawn_position
 		health = max_health
 		emit_signal("health_changed", health, max_health)
+		emit_signal("wins_changed", wins)
 		special_ready = false
 		special_sequence.clear()
 		combo_count = 0
