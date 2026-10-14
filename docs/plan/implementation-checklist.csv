@@ -1,0 +1,16 @@
+Title,Role,Task,Estimate,Priority,Labels
+Validar valores provisórios,Game Designer,Validar e aceitar valores provisórios (dano, startup) em playtest,2h,High,design
+Detalhar especiais e regras de input,Game Designer,Especificar combos e janela de reconhecimento (0.5s),1h,High,design
+Priorizar requisitos,Game Designer,Priorizar requisitos e aceitar critérios de aceitação,1h,Medium,planning
+Implementar ações básicas,Gameplay Programmer,Implementar Light/Heavy, agachar, pular e frame data configurável,1-2d,High,gameplay
+Implementar hitboxes/hurtboxes,Gameplay Programmer,Implementar sistema de hitboxes/hurtboxes e aplicação de dano/knockback,1d,High,gameplay
+Implementar reconhecimento de combo,Gameplay Programmer,Combo LF->HF->Jump com janela 0.5s e efeitos,1d,High,gameplay
+Suporte entradas 2P,Gameplay Programmer,Input layer para dois jogadores (teclado/controle),0.5-1d,High,gameplay
+Expor parâmetros para iteração,Gameplay Programmer,Arquivo de configuração para startup/active/dano,2-3h,Medium,tooling
+Feedback visual de hits,UI Programmer,Implementar hit sparks, screen shake e indicação de cooldown/UI,1d,Medium,ui
+Overlay debug de frame data,UI Programmer,Mostrar frame data e inputs para playtest,0.5-1d,Medium,tools
+Animações placeholders,Artist,Fornecer animações básicas temporárias (idle, hit, jump),1d,Low,art
+Animações finais,Artist,Animações polidas para movimentos e especiais,2-3d,High,art
+Efeitos visuais,Artist,Crear efeitos visuais simples para hits e especiais,1d,Medium,vfx
+Arena de teste,Level Designer,Criar arena com limites e posicionamento inicial,0.5-1d,Low,level
+Playtests e relatório,Tester,Executar 3 rodadas de playtest e registrar issues,2-3h per round,High,testing

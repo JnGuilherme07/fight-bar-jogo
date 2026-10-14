@@ -1,0 +1,15 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1791987938
+::res://scenes/::1791987622
+Main.tscn::PackedScene::-1::1791987622::0::1::::<><><>0<>0<><>::res://scripts/Player.gd<>res://scripts/Enemy.gd<>res://scripts/HUD.gd<>res://sprites/daniel-san-init.png
+::res://scripts/::1791987622
+Enemy.gd::GDScript::8012329151882525369::1791987622::0::1::::<>CharacterBody2D<><>0<>0<><>::
+HUD.gd::GDScript::3994771982113394863::1791987622::0::1::::<>CanvasLayer<><>0<>0<><>::
+Player.gd::GDScript::5740504083452431480::1791987622::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://sprites/::1791987622
+daniel-san-andando.png::CompressedTexture2D::2187734698060569724::1791987622::1791987622::1::::<><><>0<>0<>1f2fe4e28b095a9a8cc85fd8fad2c2a6<>res://.godot/imported/daniel-san-andando.png-efd3700ec16b1789636cf728ec1c0c1b.ctex::
+daniel-san-ataque.png::CompressedTexture2D::2307556212030910284::1791987622::1791987622::1::::<><><>0<>0<>256512e1b46dd95d256d613a9127c39c<>res://.godot/imported/daniel-san-ataque.png-44361961b4d0335bb2d4f9773532e5e2.ctex::
+daniel-san-dano.png::CompressedTexture2D::287430200229934251::1791987622::1791987622::1::::<><><>0<>0<>60c699c3647a7291111314fb70d24fa2<>res://.godot/imported/daniel-san-dano.png-5a0ad8ebea922efe80c8332fb69a1bae.ctex::
+daniel-san-derrotado.png::CompressedTexture2D::1949196982990545850::1791987622::1791987622::1::::<><><>0<>0<>ecd0c1678ed11e7b1ee2f077929129fb<>res://.godot/imported/daniel-san-derrotado.png-340dadbdc262f19d8d61a7aa69800b51.ctex::
+daniel-san-init.png::CompressedTexture2D::5155070196738761113::1791987622::1791987622::1::::<><><>0<>0<>d727eb8a12e57c30c019ed060b1af137<>res://.godot/imported/daniel-san-init.png-59bc9e11030e57dac2d293b2c617ac54.ctex::
+daniel-san-pulo.png::CompressedTexture2D::2122221018118388240::1791987622::1791987622::1::::<><><>0<>0<>3589743cf0b4e1e45f9b3219b2ad57e4<>res://.godot/imported/daniel-san-pulo.png-ea82629ba1581c37ae060042efb99e11.ctex::
